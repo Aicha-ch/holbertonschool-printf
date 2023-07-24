@@ -4,9 +4,9 @@
  * @c: input character
  * Return: void
  */
-void put_char(char c)
+void put_char(va_list args)
 {
-	write(STDOUT_FILENO, &c, 1);
+	write(STDOUT_FILENO, &(va_arg(args, int)), 1);
 }
 
 /**
