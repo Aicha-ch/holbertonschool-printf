@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * put_char - is a function that puts a charachter
+ * put_char - is a function that puts a character
  * @c: input character
  * Return: void
  */
@@ -38,3 +38,15 @@ void print_percentage()
 {
 	write(1, "%", 1);
 }
+
+/**
+ * print_integer - is a function that print integer
+ *
+ * Return: void
+ */
+
+void print_integer (int num)
+{
+	write(STDOUT_FILENO, &num, sizeof(int);
+}
+
