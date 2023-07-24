@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _putchar - is a function that puts a charachter
+ * put_char - is a function that puts a charachter
  * @c: input character
  * Return: void
  */
@@ -24,4 +24,13 @@ char *print_string (char *str)
 		put_char(str[i]);
 	}
 	return (str);
+}
+/**
+ * put_perc - is a function that puts a symbol percentage
+ * Return: void
+ */
+void put_perc(void)
+{
+	char symbol = '%';
+	write(STDOUT_FILENO, &symbol, 1);
 }
