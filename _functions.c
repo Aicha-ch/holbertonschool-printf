@@ -15,9 +15,12 @@ void put_char(char c)
  * @size: the size of the given string
  * Return: 0 (Success)
  */
-char *print_string (char *str)
+char *print_string (va_list args)
 {
 	unsigned int i;
+	char *str;
+	
+	str = va_arg(args, char*)
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
