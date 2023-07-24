@@ -25,12 +25,13 @@ char *print_string (char *str)
 	}
 	return (str);
 }
+
 /**
- * put_perc - is a function that puts a symbol percentage
+ * print_percentage - is a function that puts %
+ *
  * Return: void
  */
-void put_perc(void)
+void print_percentage()
 {
-	char symbol = '%';
-	write(STDOUT_FILENO, &symbol, 1);
+	write(1, "%", 1);
 }
