@@ -53,18 +53,18 @@ int print_integer (va_list args)
 
 	if (n == 0)
 	{
-		_putchar('0');
+		put_char('0');
 		return(1);
 	}
 	if (n < 0)
 	{
-		_putchar('-');
+		put_char('-');
 		n = n * -1;
 		count++;
 	}
 	for (i = 10; i <= n; i *= 10)
 	{
-		_putchar (((n / i) % 10) + '0');
+		put_char (((n / i) % 10) + '0');
 		count++;
 	}
 	return (count);
