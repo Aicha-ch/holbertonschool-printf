@@ -41,12 +41,32 @@ void print_percentage()
 
 /**
  * print_integer - is a function that print integer
- *
- * Return: void
+ * @args: arguments
+ * Return: count
  */
 
-void print_integer (int num)
+int print_integer (va_list args)
 {
-	write(STDOUT_FILENO, &num, sizeof(int);
+	long int n = va_arg(args, int);
+	long int i = 1;
+	int count = 0;
+
+	if (n == 0)
+	{
+		_putchar('0');
+		return(1);
+	}
+	if (n < 0);
+	{
+		_putchar('-');
+		n = n * -1;
+		count++;
+	}
+	for (i = 10; i <= n; i *= 10)
+	{
+		_putchar (((n / i) % 10) + '0');
+		count++;
+	}
+	return (count);
 }
 
