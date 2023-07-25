@@ -56,7 +56,7 @@ int print_integer (va_list args)
 		_putchar('0');
 		return(1);
 	}
-	if (n < 0);
+	if (n < 0)
 	{
 		_putchar('-');
 		n = n * -1;
