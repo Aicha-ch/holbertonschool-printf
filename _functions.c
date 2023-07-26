@@ -19,6 +19,7 @@ int print_char(va_list args)
 {
 	char c = va_arg(args, int);
 	_putchar(c);
+	return (1);
 }
 
 /**
@@ -26,6 +27,7 @@ int print_char(va_list args)
  * @str: pointer to charcter
  * Return: 0 (Success)
  */
+
 int print_string(va_list args)
 {
 	unsigned int i;
@@ -35,8 +37,7 @@ int print_string(va_list args)
 		
 	if (str == NULL)
 	{
-		_putchar('\0');
-		return;
+		str = "(null)";
 	}
 	for (i = 0; str[i] != '\0'; i++)
 	{

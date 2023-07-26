@@ -20,7 +20,6 @@ int _printf(const char *format, ...)
 	{
 		return (-1);
 	}
-	format[i] = va_arg(args, int);
 
 	while (format[i] != '\0')
 	{
@@ -29,15 +28,23 @@ int _printf(const char *format, ...)
 			_putchar(format[i]);
 			count++;
 		}
+
 		else
 		{
-			if (format[i + 1] = 'c' || format[i + 1] = 's' || format[i + 1] = '%' || format[i + 1] = 'd' || format[i + 1] = 'i')
-				f = get_func(const char format[i + 1];
-						count ++;
+			if (format[i + 1] == 'c' || format[i + 1] == 's' || format[i + 1] == '%' || format[i + 1] == 'd' || format[i + 1] == 'i')
+			{
+				f = get_func(&format[i + 1]);
+						count += f(args);
+			}
+			else
+			{
+				_putchar(format[i + 1]);
+				count++;
 			}
 		}
+
 		i++;
-		va_end(args);
 	}
+	va_end(args);
 	return (count);
 }

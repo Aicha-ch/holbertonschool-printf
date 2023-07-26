@@ -15,12 +15,13 @@ typedef struct print_data
 } print_d;
 
 
-
-void put_char(va_list args);
 int _printf(const char *format, ...);
-char *print_string (va_list args);
-void print_percentage();
-int print_integer (va_list args);
+int _putchar(char c);
+int print_char(va_list args);
+int print_string(va_list args);
+int print_percent(va_list args);
+int print_dec (va_list args);
+int (*get_func(const char *format))(va_list);
 
 
 #endif

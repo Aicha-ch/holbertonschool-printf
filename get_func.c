@@ -14,7 +14,7 @@ int (*get_func(const char *format))(va_list)
 		{"%", print_percent},
 		{NULL, NULL}
 	};
-	int i;
+	int i = 0;
 
 	while (tab_s[i].x != NULL)
 	{
