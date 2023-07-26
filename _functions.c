@@ -1,72 +1,96 @@
 #include "main.h"
 /**
- * put_char - is a function that puts a character
+ * _putchar - puts a character
  * @c: input character
- * Return: void
+ * Return: 1 (Success)
  */
-void put_char(va_list args)
+int _putchar(char c)
 {
-	write(STDOUT_FILENO, &(va_arg(args, int)), 1);
+	return (write(STDOUT_FILENO, &c, 1));
+}
+
+
+/**
+ * print_char - is a function that prints a character
+ * @args: va_list variable contains the char to be printed
+ * Return: 1
+ */
+int print_char(va_list args)
+{
+	char c = va_arg(args, int);
+	_putchar(c);
 }
 
 /**
  * print_string - is a function that prints a string
  * @str: pointer to charcter
- * @size: the size of the given string
  * Return: 0 (Success)
  */
-char *print_string (va_list args)
+int print_string(va_list args)
 {
 	unsigned int i;
 	char *str;
 	
-	str = va_arg(args, char*)
-
+	str = va_arg(args, char*);
+		
+	if (str == NULL)
+	{
+		_putchar('\0');
+		return;
+	}
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		put_char(str[i]);
+		_putchar(str[i]);
 	}
-	return (str);
+	return (0);
 }
 
 /**
- * print_percentage - is a function that puts %
- *
- * Return: void
+ * print_percentage - prints a percentage sign
+ * @args: argument list
+ * Return: Always returns 1
  */
-void print_percentage()
+int print_percent(va_list args)
 {
-	write(1, "%", 1);
+	(void)args;
+	return write(1, "%", 1);
 }
 
 /**
- * print_integer - is a function that print integer
+ * print_dec - is a function that print integer
  * @args: arguments
- * Return: count
+ * Return: len the number of characters
  */
 
-int print_integer (va_list args)
+int print_dec (va_list args)
 {
-	long int n = va_arg(args, int);
-	long int i = 1;
-	int count = 0;
+	int value;
+	unsigned int abs, i, c = 1;
+	int n = 0;
 
-	if (n == 0)
+	value = va_arg(args, int);
+
+	if (value < 0)
 	{
-		put_char('0');
-		return(1);
+		_putchar('-');
+		n++;
+		abs = value * (-1);
 	}
-	if (n < 0)
+	else
 	{
-		put_char('-');
-		n = n * -1;
-		count++;
+		abs = value;
 	}
-	for (i = 10; i <= n; i *= 10)
+	i = abs;
+	while (i > 9)
 	{
-		put_char (((n / i) % 10) + '0');
-		count++;
+		i = i / 10;
+		c = c * 10;
 	}
-	return (count);
+	while (c >= 1)
+	{
+		_putchar(((abs / c) % 10) + '0');
+		n++;
+		c = c / 10;
+	}
+	return (n);
 }
-

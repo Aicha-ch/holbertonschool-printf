@@ -5,11 +5,14 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include <unistd.h>
+#include <string.h>
+#include <limits.h>
 
-typedef struct {
-	char *p;
-	int (*f)()(va_list args);
-} 
+typedef struct print_data 
+{
+	char *x;
+	int (*f)(va_list);
+} print_d;
 
 
 
