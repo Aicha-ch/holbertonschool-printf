@@ -1,8 +1,7 @@
 #include "main.h"
 /**
  * _printf - function that prints a variable number of arguments
- * @format: a pointer to character
- * @...: ellipsis
+ * @format: pointer to character
  * Return: an integer (the number of printed arguments)
  */
 int _printf(const char *format, ...)
@@ -14,7 +13,7 @@ int _printf(const char *format, ...)
 	i = 0;
 	count = 0;
 
-	va_start (args, format);
+	va_start(args, format);
 
 	if (format == NULL)
 	{
@@ -39,8 +38,7 @@ int _printf(const char *format, ...)
 			else
 			{
 				count += _putchar('%');
-				_putchar(format[i + 1]);
-				count++;
+				count += _putchar(format[i + 1]);
 			}
 			i++;
 		}
