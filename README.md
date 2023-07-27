@@ -2,9 +2,6 @@
 
 ![331125_630361](https://user-images.githubusercontent.com/124582867/229380110-7673c718-e712-4ac6-aa56-c816d5535188.png)
 
-## FLOWCHART
-![Flowchart]
-
 ## Description
 _printf is a function that stands fot "print formatted".
 It prints a string to the standard output, according to a given format.
@@ -58,3 +55,4 @@ betty-style.pl and betty-doc.pl
 ![Flowchart](https://github.com/Aicha-ch/holbertonschool-printf/blob/master/flow%20chart%20_printf.drawio.png)
 ## Author
 * [**Aicha CHOUIKHI**](https://github.com/Aicha-ch)
+* 27/07/2023
