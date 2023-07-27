@@ -3,7 +3,7 @@
 ![331125_630361](https://user-images.githubusercontent.com/124582867/229380110-7673c718-e712-4ac6-aa56-c816d5535188.png)
 
 ## FLOWCHART
-![Flowchart](https://github.com/Aicha-ch/holbertonschool-printf/blob/master/flow%20chart%20_printf.drawio.png)
+![Flowchart]
 
 ## Description
 _printf is a function that stands fot "print formatted".
@@ -54,6 +54,7 @@ $ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
 
 The style code of our function was checked using:
 betty-style.pl and betty-doc.pl
-
+## FLOWCHART
+![Flowchart](https://github.com/Aicha-ch/holbertonschool-printf/blob/master/flow%20chart%20_printf.drawio.png)
 ## Author
 * [**Aicha CHOUIKHI**](https://github.com/Aicha-ch)
