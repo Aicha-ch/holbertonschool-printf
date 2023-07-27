@@ -6,12 +6,12 @@
  */
 int _printf(const char *format, ...)
 {
-	int i, count;
+	int i, length;
 	va_list args;
 	int (*f)(va_list);
 
 	i = 0;
-	count = 0;
+	length = 0;
 
 	va_start(args, format);
 
@@ -25,7 +25,7 @@ int _printf(const char *format, ...)
 		if (format[i] != '%')
 		{
 			_putchar(format[i]);
-			count++;
+			length;
 		}
 
 		else
@@ -33,12 +33,14 @@ int _printf(const char *format, ...)
 			if (format[i + 1] == 'c' || format[i + 1] == 's' || format[i + 1] == '%' || format[i + 1] == 'd' || format[i + 1] == 'i')
 			{
 				f = get_func(&format[i + 1]);
-						count += f(args);
+				f(args);
+				length;
 			}
 			else
 			{
-				count += _putchar('%');
-				count += _putchar(format[i + 1]);
+				_putchar('%');
+			       	_putchar(format[i + 1]);
+				length += 2;
 			}
 			i++;
 		}
@@ -46,5 +48,5 @@ int _printf(const char *format, ...)
 		i++;
 	}
 	va_end(args);
-	return (count);
+	return (length);
 }
