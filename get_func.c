@@ -1,8 +1,8 @@
 #include "main.h"
 /**
  * get_func: cheks for a valid format specifier
- * @format: character
- * pointer to valid function or NULL
+ * @format: pointer to character
+ * Return: pointer function or NULL
  */
 int (*get_func(const char *format))(va_list)
 {
@@ -22,7 +22,7 @@ int (*get_func(const char *format))(va_list)
 		{
 			return (tab_s[i].f);
 		}
-	i++;	
+	i++;
 	}
 	return (NULL);
 }
