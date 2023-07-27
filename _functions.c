@@ -18,13 +18,14 @@ int _putchar(char c)
 int print_char(va_list args)
 {
 	char c = va_arg(args, int);
+
 	_putchar(c);
 	return (1);
 }
 
 /**
  * print_string - is a function that prints a string
- * @str: pointer to charcter
+ * @args: a va_list argument
  * Return: 0 (Success)
  */
 
@@ -32,23 +33,23 @@ int print_string(va_list args)
 {
 	unsigned int i;
 	char *str;
-	
+	int len = 0;
 	str = va_arg(args, char*);
-		
+
 	if (str == NULL)
 	{
 		str = "(null)";
 	}
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		_putchar(str[i]);
+		len +=_putchar(str[i]);
 	}
-	return (0);
+	return (len);
 }
 
 /**
- * print_percentage - prints a percentage sign
- * @args: argument list
+ * print_percent - prints a percentage sign
+ * @args: a va-list argument
  * Return: Always returns 1
  */
 int print_percent(va_list args)
@@ -63,7 +64,7 @@ int print_percent(va_list args)
  * Return: len the number of characters
  */
 
-int print_dec (va_list args)
+int print_dec(va_list args)
 {
 	int value;
 	unsigned int abs, i, c = 1;
