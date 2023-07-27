@@ -55,4 +55,3 @@ betty-style.pl and betty-doc.pl
 ![Flowchart](https://github.com/Aicha-ch/holbertonschool-printf/blob/master/flow%20chart%20_printf.drawio.png)
 ## Author
 * [**Aicha CHOUIKHI**](https://github.com/Aicha-ch)
-* 27/07/2023
