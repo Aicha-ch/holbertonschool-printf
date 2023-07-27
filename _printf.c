@@ -33,8 +33,7 @@ int _printf(const char *format, ...)
 			if (format[i + 1] == 'c' || format[i + 1] == 's' || format[i + 1] == '%' || format[i + 1] == 'd' || format[i + 1] == 'i')
 			{
 				f = get_func(&format[i + 1]);
-				f(args);
-				length++;
+				length += f(args);
 			}
 			else
 			{
